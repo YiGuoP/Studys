@@ -1,0 +1,26 @@
+启动zookeeper		bin/zkServer.sh start
+启动zookeeper客户端	bin/zkCli.sh
+启动kafka				shells/kafka.sh
+启动Hbase			bin/start-hbase.sh 
+启动Hbase客户端		bin/hbase shell
+启动phoenix			bin/sqlline.py hadoop-single:2181
+启动redis				redis-server redis.conf
+启动redis客户端		redis-cli
+启动elasticsearch		切换su es 	bin/elasticsearch -d
+启动kibana			bin/kibana
+部署到yarn：
+    1 启动hadoop   	start-all.sh
+    2 启动flink    	./bin/start-cluster.sh
+    3 ./bin/yarn-session.sh --detached
+    4 bin/flink run  --class cn.flink.deploy5.WordCount   /root/flinkDemo.jar
+
+1.使用gmall2.sql
+2.异步I/O时，注意id的类型是integer
+3.实体类属性类型不能都是String
+4.new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+5.不出效果时，看一下水位线的延迟，以5分钟窗口为例，所有需要关联的表，都需要改时间
+
+
+ 
+
+	 
